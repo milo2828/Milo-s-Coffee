@@ -1,53 +1,3 @@
-/* Base styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9; /* Light cream background */
-    color: #4B2E2A; /* Deep coffee color for text */
-}
-
-/* Navigation Bar */
-header {
-    background-color: #4B2E2A; /* Dark coffee color */
-    color: #fff;
-    padding: 15px 0;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 30px;
-}
-
-nav .logo h1 {
-    margin: 0;
-    font-size: 2rem;
-    font-family: 'Courier New', Courier, monospace;
-    letter-spacing: 2px;
-}
-
-nav .nav-links {
-    list-style: none;
-    padding: 0;
-    display: flex;
-}
-
-nav .nav-links li {
-    margin: 0 25px;
-}
-
-nav .nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
-}
-
-nav .nav-links li a:hover {
-    text-decoration: underline;
-}
-
 /* Home Section */
 .home-section {
     background-image: url('home-bg.jpg'); /* Add a warm coffee shop background image */
@@ -62,11 +12,13 @@ nav .nav-links li a:hover {
     font-size: 3.5rem;
     margin: 0;
     font-weight: bold;
+    color: #4B2E2A; /* Dark coffee color */
 }
 
 .hero-content p {
     font-size: 1.6rem;
     margin: 20px 0;
+    color: #6f4f31; /* Light coffee color */
 }
 
 .cta-button {
@@ -83,193 +35,19 @@ nav .nav-links li a:hover {
     background-color: #e07b3c; /* Slightly darker brown for hover effect */
 }
 
-/* Menu Section */
-.menu-section {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #fff6e5; /* Light cream background for the menu */
-}
-
-.menu-section h2 {
-    font-size: 2.5rem;
-    color: #4B2E2A;
-    margin-bottom: 40px;
-    font-weight: bold;
-}
-
-.menu-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.menu-item {
-    margin: 20px;
-    max-width: 320px;
-    text-align: center;
-    background-color: #fff; /* White background for each menu item */
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.menu-item:hover {
-    transform: scale(1.05);
-}
-
-.menu-item img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.menu-item h3 {
-    font-size: 1.7rem;
-    margin: 10px 0;
-    color: #4B2E2A;
-}
-
-.menu-item p {
+/* New "Add to Order" Button */
+.add-to-order-btn {
+    padding: 12px 30px;
+    background-color: #6f4f31; /* Rich coffee color */
+    color: white;
+    text-decoration: none;
     font-size: 1.2rem;
-    color: #6f4f31; /* Lighter coffee color for description */
-}
-
-.menu-item span {
-    font-size: 1.3rem;
-    color: #f4a261; /* Light coffee color for price */
-    font-weight: bold;
-}
-
-/* About Us Section */
-.about-section {
-    padding: 60px 20px;
-    background-color: #f4f4f4; /* Light background */
-    text-align: center;
-}
-
-.about-section h2 {
-    font-size: 2.5rem;
-    color: #4B2E2A;
-    margin-bottom: 20px;
-}
-
-.about-section p {
-    font-size: 1.3rem;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
-    color: #6f4f31;
-}
-
-/* Contact Section */
-.contact-section {
-    padding: 60px 20px;
-    background-color: #4B2E2A; /* Coffee color background */
-    color: white;
-}
-
-.contact-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-}
-
-.contact-section p {
-    font-size: 1.3rem;
-    margin-bottom: 40px;
-    max-width: 800px;
-    margin: 0 auto;
-    color: #fff;
-    line-height: 1.6;
-}
-
-.contact-section form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contact-section form input,
-.contact-section form textarea {
-    width: 100%;
-    max-width: 500px;
-    padding: 15px;
-    margin: 10px 0;
     border-radius: 5px;
-    border: 1px solid #ddd;
-    font-size: 1.1rem;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
 }
 
-.contact-section form button {
-    padding: 15px 25px;
-    background-color: #f4a261; /* Light coffee color */
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1.1rem;
-}
-
-.contact-section form button:hover {
-    background-color: #e07b3c;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav .nav-links {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10px;
-    }
-
-    nav .nav-links li {
-        margin: 10px 0;
-    }
-
-    .hero-content h2 {
-        font-size: 2.8rem;
-    }
-
-    .hero-content p {
-        font-size: 1.4rem;
-    }
-
-    .cta-button {
-        font-size: 1.1rem;
-    }
-
-    .menu-items {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu-item {
-        max-width: 80%;
-    }
-}
-
-@media (max-width: 480px) {
-    nav .logo h1 {
-        font-size: 1.6rem;
-    }
-
-    .menu-item h3 {
-        font-size: 1.4rem;
-    }
-
-    .menu-item p {
-        font-size: 1.1rem;
-    }
-
-    .cta-button {
-        font-size: 1rem;
-    }
+.add-to-order-btn:hover {
+    background-color: #4B2E2A; /* Darker coffee color for hover effect */
 }
