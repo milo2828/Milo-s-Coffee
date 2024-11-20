@@ -13,7 +13,7 @@ body {
 
 
 header {
-    background-color: #3e2a47; 
+    background-color:  #7b3f00; 
     padding: 10px 20px;
 }
 
@@ -45,7 +45,7 @@ header .logo h1 {
 }
 
 .home-section {
-    background-color: #7b3f00;
+    background-color: #f5deb3;
     padding: 100px 20px;
     text-align: center;
 }
