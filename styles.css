@@ -3,14 +3,15 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f4f1e1; /* Creamy white background */
+    color: #4b3621; /* Coffee brown text */
 }
 
 /* Navigation Bar */
 header {
-    background-color: #333;
+    background-color: #3e2a47; /* Deep brown background */
     color: #fff;
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 nav {
@@ -22,7 +23,8 @@ nav {
 
 nav .logo h1 {
     margin: 0;
-    font-size: 1.8rem;
+    font-size: 2rem;
+    font-family: 'Georgia', serif; /* Elegant serif font */
 }
 
 nav .nav-links {
@@ -32,7 +34,7 @@ nav .nav-links {
 }
 
 nav .nav-links li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav .nav-links li a {
@@ -47,63 +49,53 @@ nav .nav-links li a:hover {
 
 /* Home Section */
 .home-section {
-    background-image: url('home-bg.jpg'); /* Add a warm coffee shop background image */
+    background-image: url('home-bg.jpg');
     background-size: cover;
     background-position: center;
     color: white;
     text-align: center;
-    padding: 120px 20px; /* Increased padding for more space */
+    padding: 120px 0;
+    background-color: rgba(62, 42, 71, 0.6); /* Semi-transparent dark brown overlay */
 }
 
 .hero-content h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin: 0;
-    font-weight: bold;
-    color: #4B2E2A; /* Dark coffee color */
+    color: #f4f1e1; /* Cream white text */
 }
 
 .hero-content p {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin: 20px 0;
-    color: #6f4f31; /* Light coffee color */
+    color: #f4f1e1; /* Cream white text */
 }
 
 .cta-button, .add-to-order-btn {
-    padding: 12px 25px;
-    background-color: #f4a261; /* Light coffee color */
+    padding: 10px 20px;
+    background-color: #4b3621; /* Coffee brown */
     color: #fff;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
-    display: inline-block;
+    margin: 10px 0;
 }
 
 .cta-button:hover, .add-to-order-btn:hover {
-    background-color: #e07b3c; /* Slightly darker brown for hover effect */
-}
-
-/* Place Order Button */
-.place-order-btn {
-    padding: 12px 30px;
-    background-color: #6f4f31; /* Rich coffee color */
-    color: white;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    margin-top: 20px;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
-
-.place-order-btn:hover {
-    background-color: #4B2E2A; /* Darker coffee color for hover effect */
+    background-color: #3e2a47; /* Darker brown on hover */
 }
 
 /* Menu Section */
 .menu-section {
     padding: 50px 20px;
-    background-color: #f9f9f9;
+    text-align: center;
+    background-color: #fff; /* White background */
+}
+
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
 }
 
 .menu-category {
@@ -111,43 +103,153 @@ nav .nav-links li a:hover {
 }
 
 .menu-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+    max-width: 300px;
+    text-align: center;
+    border: 1px solid #e0d8c0; /* Light cream border */
+    border-radius: 8px;
+    background-color: #fff; /* White background */
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
 .menu-item img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin-right: 15px;
+    width: 100%;
+    border-radius: 8px;
+    height: auto;
 }
 
 .menu-item h4 {
-    font-size: 1.3rem;
-    color: #4B2E2A;
+    font-size: 1.5rem;
+    color: #4b3621; /* Coffee brown */
+    margin: 10px 0;
 }
 
 .menu-item p {
-    font-size: 1rem;
-    color: #6f4f31;
+    color: #6b4f31; /* Lighter brown for description */
+    font-size: 1.1rem;
 }
 
 .menu-item span {
-    font-size: 1.1rem;
-    color: #333;
+    font-size: 1.2rem;
+    color: #3e2a47; /* Dark brown */
+    font-weight: bold;
 }
 
-.menu-item .add-to-order-btn {
-    background-color: #6f4f31;
-    margin-left: 20px;
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.place-order-btn {
+    padding: 15px 30px;
+    background-color: #f4b400; /* Yellow for button */
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+.place-order-btn:hover {
+    background-color: #e69b00; /* Darker yellow on hover */
+}
+
+/* About Us Section */
+.about-section {
+    padding: 50px 20px;
+    background-color: #f4f1e1; /* Creamy background */
+    text-align: center;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 50px 20px;
+    background-color: #3e2a47; /* Dark brown background */
+    color: white;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-section form input,
+.contact-section form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.contact-section form button {
+    padding: 10px 20px;
+    background-color: #f4b400; /* Yellow button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact-section form button:hover {
+    background-color: #e69b00; /* Darker yellow on hover */
 }
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #3e2a47; /* Dark brown background */
     color: white;
     padding: 20px;
     text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .nav-links {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    nav .nav-links li {
+        margin: 5px 0;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .menu-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .menu-item span {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        font-size: 1.1rem;
+    }
 }
