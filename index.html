@@ -1,196 +1,234 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Milo's Coffee Shop</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <script src="main.js"></script>
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
 
-    <!-- Navigation -->
-    <header>
-        <nav>
-            <div class="logo">
-                <h1>Milo's Coffee</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+/* Header and Navigation */
+header {
+    background-color: #2C3E50;
+    padding: 20px;
+}
 
-    <!-- Home Section -->
-    <section id="home" class="home-section">
-        <div class="hero-content">
-            <h2>Welcome to Milo's Coffee</h2>
-            <p>Freshly brewed coffee for every taste!</p>
-            <a href="#menu" class="cta-button">Browse Our Menu</a>
-            <a href="#menu" class="add-to-order-btn">Add to Order</a>
-        </div>
-    </section>
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    <!-- Menu Section -->
-    <section id="menu" class="menu-section">
-        <h2>Our Menu</h2>
-        <div class="menu-items">
-            <!-- Coffee Section -->
-            <div class="menu-category">
-                <h3>Coffee</h3>
-                <div class="menu-item">
-                    <img src="Espresso.jpg" alt="A cup of Espresso coffee in a white mug on a saucer with coffee beans beside it.">
-                    <h4>Espresso</h4>
-                    <p>A strong and bold coffee shot.</p>
-                    <span>$3.00</span>
-                    <a href="#order" class="add-to-order-btn">Add to Order</a>
-                </div>
-                <div class="menu-item">
-                    <img src="coffee2.jpg" alt="A latte with a beautiful milk foam art in a glass cup.">
-                    <h4>Latte</h4>
-                    <p>A creamy blend of espresso and steamed milk.</p>
-                    <span>$4.50</span>
-                    <a href="#order" class="add-to-order-btn">Add to Order</a>
-                </div>
-                <div class="menu-item">
-                    <img src="coffee3.jpg" alt="A cappuccino with frothy milk and cocoa powder on top in a white cup.">
-                    <h4>Cappuccino</h4>
-                    <p>Espresso topped with rich frothy milk.</p>
-                    <span>$4.00</span>
-                    <a href="#order" class="add-to-order-btn">Add to Order</a>
-                </div>
-                <div class="menu-item">
-                    <img src="coffee4.jpg" alt="A rich and aromatic Mocha with whipped cream on top.">
-                    <h4>Mocha</h4>
-                    <p>A chocolatey espresso treat with whipped cream.</p>
-                    <span>$4.75</span>
-                    <a href="#order" class="add-to-order-btn">Add to Order</a>
-                </div>
-                <div class="menu-item">
-                    <img src="coffee5.jpg" alt="A fresh cup of Americano coffee.">
-                    <h4>Americano</h4>
-                    <p>Espresso with hot water for a smooth finish.</p>
-                    <span>$3.50</span>
-                    <a href="#order" class="add-to-order-btn">Add to Order</a>
-                </div>
-                <div class="menu-item">
-                    <img src="matcha.jpg" alt="A vibrant cup of Matcha Latte with a delicate green hue.">
-                    <h4>Matcha Latte</h4>
-                    <p>A smooth blend of matcha green tea and steamed milk.</p>
-                    <span>$4.25</span>
-                    <a href="#order" class="add-to-order-btn">Add to Order</a>
-                </div>
-                <div class="menu-item">
-                    <img src="coffee6.jpg" alt="Iced Coffee with a refreshing and cooling appearance.">
-                    <h4>Iced Coffee</h4>
-                    <p>Chilled espresso served over ice.</p>
-                    <span>$3.75</span>
-                    <a href="#order" class="add-to-order-btn">Add to Order</a>
-                </div>
-                <div class="menu-item">
-                    <img src="matcha2.jpg" alt="Iced Matcha Latte with a vibrant green hue in a glass.">
-                    <h4>Iced Matcha Latte</h4>
-                    <p>Chilled matcha blended with ice and milk.</p>
-                    <span>$4.50</span>
-                    <a href="#order" class="add-to-order-btn">Add to Order</a>
-                </div>
-                <div class="menu-item">
-                    <img src="mocha2.jpg" alt="A sweet iced mocha with whipped cream on top.">
-                    <h4>Iced Mocha</h4>
-                    <p>Chilled mocha with a creamy finish.</p>
-                    <span>$4.75</span>
-                    <a href="#order" class="add-to-order-btn">Add to Order</a>
-                </div>
-            </div>
+nav .logo h1 {
+    color: #ecf0f1;
+    font-size: 24px;
+    margin: 0;
+}
 
-            <!-- Breads & Pastries Section -->
-            <div class="menu-category">
-                <h3>Breads & Pastries</h3>
-                <div class="menu-item">
-                    <image a=https://www.google.com/imgres?q=croissant&imgurl=https%3A%2F%2Fwww.theflavorbender.com%2Fwp-content%2Fuploads%2F2020%2F05%2FFrench-Croissants-SM-2363.jpg&imgrefurl=https%3A%2F%2Fwww.theflavorbender.com%2Fhomemade-french-croissants-step-by-step-recipe%2F&docid=Wd0MIgSOoB_wbM&tbnid=yNsW9HqL8KRVAM&vet=12ahUKEwjDxtnbrO2JAxVG5TQHHfA_BMsQM3oECBYQAA..i&w=1200&h=1200&hcb=2&itg=1&ved=2ahUKEwjDxtnbrO2JAxVG5TQHHfA_BMsQM3oECBYQAA </image>
-                    <img src="bread1.jpg" alt="A freshly baked croissant with a golden brown texture.">
-                    <h4>Croissant</h4>
-                    <p>A buttery and flaky pastry, perfect with coffee.</p>
-                    <span>$2.50</span>
-                    <a href="#order" class="add-to-order-btn">Add to Order</a>
-                </div>
-                <div class="menu-item">
-                    <img src="bread2.jpg" alt="A soft and delicious blueberry muffin.">
-                    <h4>Blueberry Muffin</h4>
-                    <p>A soft muffin with fresh blueberries.</p>
-                    <span>$3.00</span>
-                    <a href="#order" class="add-to-order-btn">Add to Order</a>
-                </div>
-                <div class="menu-item">
-                    <img src="bread3.jpg" alt="Sliced banana bread with a moist texture.">
-                    <h4>Banana Bread</h4>
-                    <p>Deliciously moist and flavorful banana bread.</p>
-                    <span>$3.50</span>
-                    <a href="#order" class="add-to-order-btn">Add to Order</a>
-                </div>
-                <div class="menu-item">
-                    <img src="bread4.jpg" alt="A fresh loaf of sourdough bread.">
-                    <h4>Sourdough Bread</h4>
-                    <p>Freshly baked with a tangy flavor and crisp crust.</p>
-                    <span>$4.00</span>
-                    <a href="#order" class="add-to-order-btn">Add to Order</a>
-                </div>
-                <div class="menu-item">
-                    <img src="bread5.jpg" alt="A delicate and soft cinnamon roll with icing on top.">
-                    <h4>Cinnamon Roll</h4>
-                    <p>A sweet and spicy treat with a soft, gooey center.</p>
-                    <span>$3.75</span>
-                    <a href="#order" class="add-to-order-btn">Add to Order</a>
-                </div>
-                <div class="menu-item">
-                    <img src="cinnamon-roll.jpg" alt="A delicious, freshly baked cinnamon roll with icing and a golden brown crust.">
-                    <h4>Cinnamon Roll</h4>
-                    <p>A warm, sweet pastry topped with creamy icing.</p>
-                    <span>$3.75</span>
-                    <a href="#order" class="add-to-order-btn">Add to Order</a>
-                </div>
-                <div class="menu-item">
-                    <img src="bread6.jpg" alt="Chocolate Chip Muffin with rich chocolate chips.">
-                    <h4>Chocolate Chip Muffin</h4>
-                    <p>Moist and soft with plenty of chocolate chips.</p>
-                    <span>$3.50</span>
-                    <a href="#order" class="add-to-order-btn">Add to Order</a>
-                </div>
-                <div class="menu-item">
-                    <img src="bread7.jpg" alt="Freshly baked almond croissant.">
-                    <h4>Almond Croissant</h4>
-                    <p>Buttery croissant filled with almond cream.</p>
-                    <span>$3.75</span>
-                    <a href="#order" class="add-to-order-btn">Add to Order</a>
-                </div>
-            </div>
-        </div>
-        <a href="#order" class="place-order-btn">Place Order</a>
-    </section>
+nav .nav-links {
+    list-style: none;
+    display: flex;
+}
 
-    <!-- About Us Section -->
-    <section id="about" class="about-section">
-        <h2>About Us</h2>
-        <p>At Milo's Coffee, Why Milo? Milo is from my name and my partner's name we combined our name so we created Milo. we believe that every cup of coffee tells a story. Our baristas are passionate about brewing the perfect cup, using only the finest beans and freshest ingredients. From traditional espresso to innovative lattes, we cater to every coffee lover's taste. Come visit us and experience the warmth and comfort of Milo's Coffee!</p>
-    </section>
+nav .nav-links li {
+    margin-right: 20px;
+}
 
-    <!-- Contact Us Section -->
-    <section id="contact" class="contact-section">
-        <h2>Contact Us</h2>
-        <p>We would love to hear from you! Whether you have questions, comments, or feedback, feel free to reach out to us.</p>
-        <p>Email: miloscoffee@gmail.com</p>
-        <p>Phone: 09633389150 </p>
-        <p>Phone: 09919452505 </p>  
-        <p>Location: 123 i love miaka, Secret </p>
-    </section>
+nav .nav-links li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 18px;
+    transition: color 0.3s;
+}
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Milo's Coffee. All Rights Reserved.</p>
-    </footer>
+nav .nav-links li a:hover {
+    color: #f39c12;
+}
 
-</body>
-</html>
+/* Home Section */
+.home-section {
+    background-image: url('coffee-shop-background.jpg'); /* Add a background image for the hero */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h2 {
+    font-size: 40px;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.hero-content .cta-button, .hero-content .add-to-order-btn {
+    background-color: #f39c12;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.hero-content .cta-button:hover, .hero-content .add-to-order-btn:hover {
+    background-color: #e67e22;
+}
+
+/* Menu Section */
+.menu-section {
+    padding: 50px;
+    background-color: #ffffff;
+}
+
+.menu-section h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #2C3E50;
+    margin-bottom: 20px;
+}
+
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+/* Menu Categories */
+.menu-category {
+    width: 45%;
+}
+
+.menu-category h3 {
+    font-size: 28px;
+    text-align: center;
+    color: #2C3E50;
+    margin-bottom: 20px;
+}
+
+/* Menu Items */
+.menu-item {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.menu-item h4 {
+    font-size: 24px;
+    color: #2C3E50;
+    margin: 15px 0;
+}
+
+.menu-item p {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+.menu-item span {
+    font-size: 18px;
+    color: #2C3E50;
+}
+
+.add-to-order-btn {
+    background-color: #f39c12;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.add-to-order-btn:hover {
+    background-color: #e67e22;
+}
+
+/* About Section */
+.about-section {
+    background-color: #ecf0f1;
+    padding: 50px;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 36px;
+    color: #2C3E50;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 18px;
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 50px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    color: #2C3E50;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 18px;
+    color: #7f8c8d;
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #2C3E50;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Place Order Button */
+.place-order-btn {
+    display: block;
+    text-align: center;
+    background-color: #f39c12;
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    margin: 50px auto 0;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.place-order-btn:hover {
+    background-color: #e67e22;
+}
