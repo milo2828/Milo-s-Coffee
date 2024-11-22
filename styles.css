@@ -1,4 +1,4 @@
- {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,18 +7,17 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f5f5f5; 
-    color: #3e2a47; 
+    background-color: #f5f5f5;
+    color: #3e2a47;
 }
 
-
 header {
-    background-color:  #7b3f00; 
+    background-color: #7b3f00;
     padding: 10px 20px;
 }
 
 header .logo h1 {
-    color: #f5f5f5; 
+    color: #f5f5f5;
     font-size: 2rem;
     margin: 0;
 }
@@ -35,13 +34,13 @@ header .logo h1 {
 
 .nav-links a {
     text-decoration: none;
-    color: #f5f5f5; 
+    color: #f5f5f5;
     font-size: 1.1rem;
     transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #a67c52; 
+    color: #a67c52;
 }
 
 .home-section {
@@ -56,7 +55,7 @@ header .logo h1 {
 }
 
 .home-section p {
-    color: #7b3f00; 
+    color: #7b3f00;
     font-size: 1.2rem;
     margin: 10px 0;
 }
@@ -64,7 +63,7 @@ header .logo h1 {
 .cta-button,
 .add-to-order-btn {
     display: inline-block;
-    background-color: #a67c52;  
+    background-color: #a67c52;
     color: #f5f5f5;
     padding: 10px 20px;
     margin: 15px 10px;
@@ -75,10 +74,9 @@ header .logo h1 {
 
 .cta-button:hover,
 .add-to-order-btn:hover {
-    background-color: #3e2a47; 
+    background-color: #3e2a47;
 }
 
- 
 .menu-section {
     padding: 50px 20px;
     background-color: #fff;
@@ -108,7 +106,7 @@ header .logo h1 {
 }
 
 .menu-item {
-    background-color: #f5f5f5;  
+    background-color: #f5f5f5;
     margin: 10px;
     padding: 20px;
     width: 250px;
@@ -130,7 +128,7 @@ header .logo h1 {
 }
 
 .menu-item p {
-    color: #a67c52; 
+    color: #a67c52;
     font-size: 1rem;
 }
 
@@ -140,7 +138,6 @@ header .logo h1 {
     font-size: 1.2rem;
     margin: 10px 0;
 }
-
 
 .add-to-order-btn {
     background-color: #a67c52;
@@ -152,7 +149,7 @@ header .logo h1 {
 }
 
 .add-to-order-btn:hover {
-    background-color: #3e2a47;  
+    background-color: #3e2a47;
 }
 
 .place-order-btn {
@@ -170,7 +167,6 @@ header .logo h1 {
 .place-order-btn:hover {
     background-color: #3e2a47;
 }
-
 
 .about-section {
     padding: 50px 20px;
@@ -192,7 +188,6 @@ header .logo h1 {
     margin: 0 auto;
 }
 
- 
 .contact-section {
     padding: 50px 20px;
     background-color: #f5f5f5;
@@ -212,10 +207,9 @@ header .logo h1 {
     margin: 5px 0;
 }
 
- 
 footer {
-    background-color: #7b3f00;  
-    color: #f5f5f5;  
+    background-color: #7b3f00;
+    color: #f5f5f5;
     text-align: center;
     padding: 15px 20px;
     position: relative;
@@ -225,56 +219,4 @@ footer {
 
 footer p {
     font-size: 1rem;
-}
-
- 
-@media (max-width: 768px) {
-    .menu-items {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu-item {
-        width: 80%;
-        margin-bottom: 20px;
-    }
-
-    .home-section h2 {
-        font-size: 2.5rem;
-    }
-
-    .home-section p {
-        font-size: 1rem;
-    }
-
-    .cta-button, .add-to-order-btn, .place-order-btn {
-        font-size: 0.9rem;
-        padding: 8px 16px;
-    }
-
-    .menu-category h3 {
-        font-size: 1.5rem;
-    }
-
-    footer p {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .home-section h2 {
-        font-size: 2rem;
-    }
-
-    .menu-item {
-        width: 90%;
-    }
-
-    .menu-item h4 {
-        font-size: 1.3rem;
-    }
-
-    .menu-item p {
-        font-size: 0.9rem;
-    }
 }
