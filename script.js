@@ -5,4 +5,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.getElementById("cart-link").addEventListener("click", function() {
         cartCount++;
-        cartCountElement.textContent =
+        cartCountElement.textContent = cartCount;
+    });
+
+    function updateCartCount(count) {
+        cartCountElement.textContent = count;
+    }
+
+    setTimeout(() => {
+        updateCartCount(0);
+    }, 5000);
+});
