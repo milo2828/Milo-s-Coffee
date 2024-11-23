@@ -1,7 +1,8 @@
-// Add any interactive features you want here
-// For example, we can add simple form validation
+document.addEventListener("DOMContentLoaded", function() {
+    let cartCount = 0;
 
-document.querySelector("form").addEventListener("submit", function(e) {
-    e.preventDefault();
-    alert("Thank you for your message! We'll get back to you soon.");
-});
+    const cartCountElement = document.getElementById("cart-count");
+
+    document.getElementById("cart-link").addEventListener("click", function() {
+        cartCount++;
+        cartCountElement.textContent =
