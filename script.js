@@ -1,18 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
-    let cartCount = 0;
-
-    const cartCountElement = document.getElementById("cart-count");
-
-    document.getElementById("cart-link").addEventListener("click", function() {
-        cartCount++;
-        cartCountElement.textContent = cartCount;
-    });
-
-    function updateCartCount(count) {
-        cartCountElement.textContent = count;
-    }
-
-    setTimeout(() => {
-        updateCartCount(0);
-    }, 5000);
-});
+document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Thank you for your message! We'll get back to you soon.");
+}); fix the css and javascript link it with html        
