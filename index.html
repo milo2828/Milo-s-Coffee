@@ -4,122 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Milo's Coffee Shop</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for Cart Icon -->
-    <style>
-        /* General Reset and Base Styling */
-        body, h1, h2, h3, h4, p, ul {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        h2, h3, h4 {
-            margin: 15px 0;
-        }
-
-        /* Navigation Styling */
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-
-        .logo h1 {
-            margin-left: 10px;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-
-        .nav-links li {
-            margin: 0 10px;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-        }
-
-        /* Shopping Cart Icon Styling */
-        .cart-container {
-            position: relative;
-        }
-
-        .cart-icon {
-            width: 30px;
-            height: 30px;
-            cursor: pointer;
-        }
-
-        #cart-count {
-            position: absolute;
-            top: -5px;
-            right: -5px;
-            background-color: red;
-            color: white;
-            font-size: 12px;
-            border-radius: 50%;
-            padding: 2px 6px;
-        }
-
-        /* Menu Section Styling */
-        .menu-section {
-            padding: 20px;
-        }
-
-        .menu-category {
-            margin-bottom: 20px;
-        }
-
-        .menu-item {
-            background-color: white;
-            padding: 10px;
-            margin: 10px 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .menu-item img {
-            width: 80px;
-            height: 80px;
-            margin-right: 15px;
-        }
-
-        .add-to-order-btn {
-            background-color: #333;
-            color: white;
-            padding: 5px 10px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        /* Footer Styling */
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            margin-top: 20px;
-        }
-    </style>
+    <!-- Linking to external CSS file -->
+    <link rel="stylesheet" href="style.css"> 
+    <!-- Font Awesome for Cart Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
@@ -140,8 +28,8 @@
             <!-- Shopping Cart Icon and Counter -->
             <div class="cart-container">
                 <a href="#order" id="cart-link">
-                    <i class="fa fa-shopping-cart cart-icon"></i> <!-- Font Awesome Cart Icon -->
-                    <span id="cart-count">0</span> <!-- This is the cart count -->
+                    <i class="fa fa-shopping-cart cart-icon"></i>
+                    <span id="cart-count">0</span> <!-- Cart count -->
                 </a>
             </div>
         </nav>
@@ -336,24 +224,19 @@
                 </div>
                 <a href="#order" class="add-to-order-btn">Add to Order</a>
             </div>
-            <!-- Repeat menu items as necessary -->
         </div>
     </section>
 
     <!-- About Us Section -->
     <section id="about" class="about-section">
         <h2>About Us</h2>
-        <p>Why Milo? Milo is from my name and my partner's name we combined our name so we created Milo. At Milo's Coffee, we believe that every cup of coffee tells a story. Our baristas are passionate about brewing the perfect cup, using only the finest beans and freshest ingredients. From traditional espresso to innovative lattes, we cater to every coffee lover's taste. Come visit us and experience the warmth and comfort of Milo's Coffee!</p>
+        <p>Why Milo? Milo is from my name and my partner's name, we combined our names and created Milo...</p>
     </section>
 
     <!-- Contact Us Section -->
     <section id="contact" class="contact-section">
         <h2>Contact Us</h2>
-        <p>We would love to hear from you! Whether you have questions, comments, or feedback, feel free to reach out to us.</p>
-        <p>Email: miloscoffee@gmail.com</p>
-        <p>Phone: 09633389150</p>
-        <p>Phone: 09919452505</p>  
-        <p>Location: 123 i love miaka, Secret </p>
+        <p>Feel free to reach out to us at miloscoffee@example.com</p>
     </section>
 
     <!-- Footer -->
@@ -361,25 +244,7 @@
         <p>&copy; 2024 Milo's Coffee. All Rights Reserved.</p>
     </footer>
 
-    <!-- JavaScript for cart functionality -->
-    <script>
-        let cartCount = 0;
-
-        // Function to update the cart count
-        function updateCartCount() {
-            document.getElementById('cart-count').textContent = cartCount;
-        }
-
-        // Function to add an item to the cart
-        function addToCart() {
-            cartCount++;  // Increment the cart count
-            updateCartCount();  // Update the cart display
-        }
-
-        // Attach event listeners to all "Add to Order" buttons
-        document.querySelectorAll('.add-to-order-btn').forEach(button => {
-            button.addEventListener('click', addToCart);
-        });
-    </script>
+    <!-- Linking to external JS file -->
+    <script src="script.js"></script>
 </body>
 </html>
