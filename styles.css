@@ -25,17 +25,17 @@ nav {
     padding: 0 20px;
 }
 
-.logo img {
-    width: 120px;  /* Resize logo image to 120px width */
-    height: auto;   /* Maintain aspect ratio of the image */
-    margin-left: 10px;
-}
-
-
 .logo h1 {
     font-size: 24px;  /* Resize logo to 120px */
     color: white;
     margin-left: 10px;
+}
+
+.logo img {
+    width: 120px;  /* Resize logo image to 120px width */
+    height: auto;   /* Maintain aspect ratio of the image */
+    margin-left: 10px;
+
 }
 
 .nav-links {
