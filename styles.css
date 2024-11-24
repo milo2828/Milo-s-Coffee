@@ -17,6 +17,7 @@ body {
 header {
     background-color: #7b3f00;
     padding: 10px 20px;
+    position: relative;
 }
 
 header .logo {
@@ -57,7 +58,7 @@ header .logo {
     color: #a67c52;
 }
 
-/* Responsive for Mobile Menu */
+/* Hamburger Menu */
 .hamburger-menu {
     display: none;
     cursor: pointer;
@@ -69,6 +70,12 @@ header .logo {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #7b3f00;
+    padding: 10px 20px;
+    border-radius: 8px;
 }
 
 /* Home Section */
@@ -231,6 +238,8 @@ footer {
 
     .nav-links {
         display: none;
+        flex-direction: column;
+        width: 100%;
     }
 
     .hamburger-menu {
@@ -258,5 +267,10 @@ footer {
     .contact-section p {
         font-size: 1rem;
         padding: 0 10px;
+    }
+
+    /* Show menu on mobile when hamburger is clicked */
+    .nav-links.active {
+        display: flex;
     }
 }
