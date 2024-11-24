@@ -1,4 +1,7 @@
-document.querySelector("form").addEventListener("submit", function(e) {
-    e.preventDefault();
-    alert("Thank you for your message! We'll get back to you soon.");
-}); fix the css and javascript link it with html        
+// Toggle navigation on small screens
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const navLinks = document.querySelector('.nav-links');
+
+hamburgerMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
