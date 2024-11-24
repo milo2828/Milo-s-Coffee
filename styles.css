@@ -60,7 +60,7 @@ header .logo {
 
 /* Home Section with Background Image */
 .home-section {
-    background-image: url('coffee background.jpg'); /* Replace 'your-image.jpg' with the path to your image */
+    background-image: url('images/coffee-background.jpg'); /* Make sure this path is correct */
     background-size: cover; /* Ensure the image covers the entire section */
     background-position: center center; /* Center the background image */
     background-attachment: fixed; /* Make the background fixed when scrolling */
@@ -73,7 +73,7 @@ header .logo {
 
 /* Optional: Darken background for text contrast */
 .hero-content {
-    background: rgba(0, 0, 0, 0.5); /* Optional: Darken the background to make text stand out */
+    background: rgba(0, 0, 0, 0.5); /* Darken the background to make text stand out */
     padding: 20px;
     border-radius: 8px;
 }
@@ -238,6 +238,10 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .home-section {
+        background-attachment: scroll; /* Fix background image attachment issue on mobile */
+    }
+
     .menu-items {
         flex-direction: column;
     }
