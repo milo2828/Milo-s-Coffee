@@ -109,10 +109,10 @@ header .logo {
 
 /* Menu Items */
 .menu-items {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    display: flex;
+    flex-direction: column; /* Portrait layout (vertical stacking) */
+    align-items: center; /* Center the items */
     gap: 20px; /* space between the items */
-    justify-content: center;
 }
 
 .menu-category {
@@ -129,6 +129,8 @@ header .logo {
 .menu-item {
     background-color: #f5f5f5;
     padding: 20px;
+    width: 80%; /* Make each item width 80% of the container for a nice portrait feel */
+    max-width: 500px; /* Limit max width for large screens */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -222,15 +224,15 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-    .menu-items {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
-    }
-}
-
 @media (max-width: 768px) {
     .menu-items {
-        grid-template-columns: 1fr; /* 1 column for mobile */
+        flex-direction: column; /* Ensure portrait layout on small screens */
+        align-items: center; /* Center the items */
+    }
+
+    .menu-item {
+        width: 90%; /* Make each item take more space on small screens */
+        max-width: none;
     }
 
     .nav-links {
