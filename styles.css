@@ -14,7 +14,7 @@ body {
 
 /* Navigation Styles */
 header {
-    background-color: #4CAF50;
+    background-color:#473810;
     padding: 10px 0;
 }
 
@@ -26,7 +26,7 @@ nav {
 }
 
 .logo h1 {
-    font-size: 24px;
+    font-size: 120px;
     color: white;
     margin-left: 10px;
 }
