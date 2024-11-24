@@ -1,4 +1,4 @@
- /* Global Reset */
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -22,35 +22,34 @@ header {
 header .logo {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .logo img {
-    width: 120px;
+    width: 100px;
     height: auto;
-    margin-right: 10px; /* Space between logo and text */
 }
 
 .logo h1 {
-    font-size: 2rem;
-    margin: 0;
+    font-size: 1.8rem;
     color: #fff;
 }
 
-/* Navigation Links */
 .nav-links {
+    list-style: none;
     display: flex;
     justify-content: flex-end;
-    list-style: none;
+    gap: 20px;
 }
 
 .nav-links li {
-    margin: 0 15px;
+    margin: 0;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #f5f5f5;
-    font-size: 1.1rem;
+    color: #fff;
+    font-size: 1rem;
     transition: color 0.3s;
 }
 
@@ -58,16 +57,30 @@ header .logo {
     color: #a67c52;
 }
 
+/* Responsive for Mobile Menu */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 /* Home Section */
 .home-section {
     background-color: #f5deb3;
-    padding: 100px 20px;
+    padding: 80px 20px;
     text-align: center;
 }
 
 .home-section h2 {
     color: #7b3f00;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .home-section p {
@@ -76,11 +89,10 @@ header .logo {
     margin: 10px 0;
 }
 
-.cta-button,
-.add-to-order-btn {
+.cta-button {
     display: inline-block;
     background-color: #a67c52;
-    color: #f5f5f5;
+    color: #fff;
     padding: 10px 20px;
     margin: 15px 10px;
     text-decoration: none;
@@ -89,8 +101,7 @@ header .logo {
     transition: background-color 0.3s;
 }
 
-.cta-button:hover,
-.add-to-order-btn:hover {
+.cta-button:hover {
     background-color: #3e2a47;
 }
 
@@ -109,27 +120,17 @@ header .logo {
 
 /* Menu Items */
 .menu-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
 }
 
-.menu-category {
-    margin-bottom: 40px;
-}
-
-.menu-category h3 {
-    font-size: 2rem;
-    color: #3e2a47;
-    margin-bottom: 15px;
-}
-
-/* Each Menu Item */
 .menu-item {
     background-color: #f5f5f5;
-    margin: 10px;
     padding: 20px;
-    width: 250px;
+    width: 100%;
+    max-width: 400px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -171,7 +172,6 @@ header .logo {
 
 .add-to-order-btn:hover {
     background-color: #3e2a47;
- 
 }
 
 /* About Section */
@@ -225,21 +225,38 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .menu-items {
-        flex-direction: column;
-    }
-
-    .menu-item {
-        width: 100%;
-        max-width: 300px;
+    .logo h1 {
+        font-size: 1.5rem;
     }
 
     .nav-links {
-        flex-direction: column;
-        margin-top: 10px;
+        display: none;
     }
 
-    .nav-links li {
-        margin: 10px 0;
+    .hamburger-menu {
+        display: block;
     }
-}                 
+
+    .menu-items {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+
+    .menu-item {
+        width: 90%; /* Make menu items wider on smaller screens */
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+    }
+
+    .about-section p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .contact-section p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+}
