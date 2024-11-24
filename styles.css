@@ -5,7 +5,10 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-
+.logo img {
+    width: 120px;  /* Resize logo image to 120px width */
+    height: auto;   /* Maintain aspect ratio of the image */
+    margin-left: 10px;
 /* Body */
 body {
     background-color: #f4f4f4;
@@ -26,16 +29,9 @@ nav {
 }
 
 .logo h1 {
-    font-size: 24px;  /* Resize logo to 120px */
+    font-size: 24px;
     color: white;
     margin-left: 10px;
-}
-
-.logo img {
-    width: 120px;  /* Resize logo image to 120px width */
-    height: auto;   /* Maintain aspect ratio of the image */
-    margin-left: 10px;
-
 }
 
 .nav-links {
