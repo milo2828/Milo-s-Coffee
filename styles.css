@@ -64,7 +64,6 @@ header .logo {
     background-size: cover; /* Ensure the image covers the entire section */
     background-position: center center; /* Center the background image */
     background-attachment: fixed; /* Make the background fixed when scrolling */
-    color: white; /* Text color for better contrast against the image */
     height: 100vh; /* Set the height to cover the entire viewport */
     display: flex;
     justify-content: center;
