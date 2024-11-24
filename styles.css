@@ -1,4 +1,4 @@
-/* Global Reset */
+ /* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -110,9 +110,8 @@ header .logo {
 /* Menu Items */
 .menu-items {
     display: flex;
-    flex-direction: column; /* Portrait layout (vertical stacking) */
-    align-items: center; /* Center the items */
-    gap: 20px; /* space between the items */
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .menu-category {
@@ -128,9 +127,9 @@ header .logo {
 /* Each Menu Item */
 .menu-item {
     background-color: #f5f5f5;
+    margin: 10px;
     padding: 20px;
-    width: 80%; /* Make each item width 80% of the container for a nice portrait feel */
-    max-width: 500px; /* Limit max width for large screens */
+    width: 250px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -172,6 +171,7 @@ header .logo {
 
 .add-to-order-btn:hover {
     background-color: #3e2a47;
+ 
 }
 
 /* About Section */
@@ -226,13 +226,12 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .menu-items {
-        flex-direction: column; /* Ensure portrait layout on small screens */
-        align-items: center; /* Center the items */
+        flex-direction: column;
     }
 
     .menu-item {
-        width: 90%; /* Make each item take more space on small screens */
-        max-width: none;
+        width: 100%;
+        max-width: 300px;
     }
 
     .nav-links {
@@ -243,4 +242,4 @@ footer {
     .nav-links li {
         margin: 10px 0;
     }
-}
+}                 
