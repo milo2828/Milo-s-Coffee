@@ -60,15 +60,16 @@ header .logo {
 
 /* Home Section with Background Image */
 .home-section {
-    background-image: url('images/coffee-background.jpg'); /* Make sure this path is correct */
+    background-image: url('images/coffee-background.jpg'); /* Ensure the path is correct */
     background-size: cover; /* Ensure the image covers the entire section */
     background-position: center center; /* Center the background image */
-    background-attachment: fixed; /* Make the background fixed when scrolling */
+    background-attachment: fixed; /* Keep background fixed on large screens */
     height: 100vh; /* Set the height to cover the entire viewport */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
 }
 
 /* Optional: Darken background for text contrast */
@@ -90,6 +91,7 @@ header .logo {
     margin: 10px 0;
 }
 
+/* Call to Action Button */
 .cta-button,
 .add-to-order-btn {
     display: inline-block;
@@ -238,19 +240,43 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Adjust the home-section background on small devices */
     .home-section {
-        background-attachment: scroll; /* Fix background image attachment issue on mobile */
+        background-attachment: scroll; /* Fix background issue on mobile */
+        height: auto; /* Allow it to be dynamic on small devices */
+        padding: 50px 20px; /* Add some padding for smaller screens */
     }
 
+    .hero-content {
+        background: rgba(0, 0, 0, 0.6); /* Darken the background slightly more for mobile */
+        padding: 15px;
+    }
+
+    .home-section h2 {
+        font-size: 2.5rem; /* Smaller heading size */
+    }
+
+    .home-section p {
+        font-size: 1rem; /* Smaller paragraph text */
+    }
+
+    .cta-button,
+    .add-to-order-btn {
+        font-size: 0.9rem; /* Smaller buttons */
+    }
+
+    /* Stack menu items vertically */
     .menu-items {
         flex-direction: column;
     }
 
     .menu-item {
-        width: 100%;
+        width: 100%; /* Full-width menu items on small screens */
         max-width: 300px;
+        margin: 10px auto;
     }
 
+    /* Adjust navigation layout on smaller screens */
     .nav-links {
         flex-direction: column;
         margin-top: 10px;
@@ -258,5 +284,24 @@ footer {
 
     .nav-links li {
         margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.5rem; /* Smaller logo text */
+    }
+
+    .menu-item h4 {
+        font-size: 1.3rem; /* Smaller item heading */
+    }
+
+    .menu-item p {
+        font-size: 0.9rem; /* Smaller menu item description */
+    }
+
+    .about-section h2,
+    .contact-section h2 {
+        font-size: 2rem; /* Smaller section titles */
     }
 }
