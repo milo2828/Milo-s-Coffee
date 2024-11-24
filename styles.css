@@ -60,7 +60,7 @@ header .logo {
 
 /* Home Section with Background Image */
 .home-section {
-    background-image: url('images/coffee-background.jpg'); /* Ensure the path is correct */
+    background-image: url('images/coffee background.jpg'); /* Ensure the path is correct */
     background-size: cover; /* Ensure the image covers the entire section */
     background-position: center center; /* Center the background image */
     background-attachment: fixed; /* Keep background fixed on large screens */
