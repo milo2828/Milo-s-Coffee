@@ -4,180 +4,259 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* General layout adjustments for larger screens */
+
+/* Body */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #3e2a47;
 }
 
-header nav {
+/* Header */
+header {
+    background-color: #7b3f00;
+    padding: 10px 20px;
+}
+
+header .logo {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
 }
 
-header nav .logo {
-    display: flex;
-    align-items: center;
+.logo img {
+    width: 100px;
+    height: auto;
 }
 
-header nav .logo h1 {
-    margin-left: 10px;
+.logo h1 {
+    font-size: 1.8rem;
+    color: #fff;
 }
 
-header nav ul {
-    display: flex;
+.nav-links {
     list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
 }
 
-header nav ul li {
-    margin: 0 20px;
+.nav-links li {
+    margin: 0;
 }
 
-header nav ul li a {
-    color: white;
+.nav-links a {
     text-decoration: none;
-    font-size: 16px;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s;
 }
 
-section {
-    padding: 40px;
+.nav-links a:hover {
+    color: #a67c52;
 }
 
-/* Centering the menu items on larger screens */
-.menu-section {
+/* Responsive for Mobile Menu */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.nav-links.active {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.menu-category {
-    width: 100%;
-    max-width: 1200px; /* To control the maximum width of the menu */
-}
-
-.menu-category h3 {
+/* Home Section */
+.home-section {
+    background-color: #f5deb3;
+    padding: 80px 20px;
     text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
 }
 
+.home-section h2 {
+    color: #7b3f00;
+    font-size: 2.5rem;
+}
+
+.home-section p {
+    color: #7b3f00;
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #a67c52;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 15px 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #3e2a47;
+}
+
+/* Menu Section */
+.menu-section {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.menu-section h2 {
+    font-size: 2.5rem;
+    color: #3e2a47;
+    margin-bottom: 30px;
+}
+
+/* Menu Items */
 .menu-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
 }
 
 .menu-item {
-    background-color: #f8f8f8;
+    background-color: #f5f5f5;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 250px; /* Adjust product card width */
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 .menu-item img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 .menu-item h4 {
-    font-size: 18px;
-    margin-top: 10px;
+    color: #3e2a47;
+    font-size: 1.5rem;
 }
 
 .menu-item p {
-    font-size: 14px;
-    color: #555;
+    color: #a67c52;
+    font-size: 1rem;
 }
 
-.menu-item select {
+.menu-item span {
+    display: block;
+    color: #3e2a47;
+    font-size: 1.2rem;
     margin: 10px 0;
-    padding: 5px;
-    font-size: 14px;
-    border-radius: 5px;
 }
 
+/* Button Styles */
 .add-to-order-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
+    background-color: #a67c52;
+    color: #fff;
+    padding: 10px;
     text-decoration: none;
     border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-/* Mobile-specific styles */
-@media (max-width: 768px) {
-    .menu-items {
-        justify-content: center;
-    }
-
-    .menu-item {
-        width: 100%;
-        max-width: 300px; /* Make sure items don't stretch too much */
-        margin: 10px 0;
-    }
+.add-to-order-btn:hover {
+    background-color: #3e2a47;
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-    .menu-items {
-        justify-content: space-between; /* Space items out a bit for laptops */
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .menu-item {
-        width: 45%; /* Two items per row */
-    }
+/* About Section */
+.about-section {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
 }
 
-@media (min-width: 1025px) {
-    .menu-items {
-        justify-content: center; /* Center menu items on larger screens */
-        gap: 30px;
-    }
+.about-section h2 {
+    font-size: 2.5rem;
+    color: #7b3f00;
+}
 
-    .menu-item {
-        width: 23%; /* Four items per row on large screens */
-    }
+.about-section p {
+    color: #3e2a47;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    color: #7b3f00;
+    margin-bottom: 30px;
+}
+
+.contact-section p {
+    color: #3e2a47;
+    font-size: 1.2rem;
 }
 
 /* Footer */
 footer {
+    background-color: #7b3f00;
+    color: #fff;
     text-align: center;
     padding: 20px;
-    background-color: #333;
-    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 50px;
 }
 
-footer p {
-    margin: 0;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 1.5rem;
+    }
 
-/* About Us and Contact sections */
-.about-section, .contact-section {
-    text-align: center;
-    margin-top: 40px;
-}
+    .nav-links {
+        display: none;
+    }
 
-.about-section h2, .contact-section h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
+    .hamburger-menu {
+        display: block;
+    }
 
-.about-section p, .contact-section p {
-    font-size: 16px;
-    color: #555;
-}
+    .menu-items {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
 
+    .menu-item {
+        width: 90%; /* Make menu items wider on smaller screens */
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+    }
+
+    .about-section p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .contact-section p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+}
