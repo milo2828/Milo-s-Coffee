@@ -1,7 +1,3 @@
-// Toggle navigation on small screens
-const hamburgerMenu = document.querySelector('.hamburger-menu');
-const navLinks = document.querySelector('.nav-links');
-
-hamburgerMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+document.querySelector('.hamburger-menu').addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.toggle('active');
 });
