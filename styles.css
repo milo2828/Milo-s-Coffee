@@ -1,262 +1,102 @@
-/* Global Reset */
-* {
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-/* Body */
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #f5f5f5;
-    color: #3e2a47;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-/* Header */
+/* Header Styles */
 header {
-    background-color: #7b3f00;
-    padding: 10px 20px;
-}
-
-header .logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    width: 120px;
-    height: auto;
-    margin-right: 10px; /* Space between logo and text */
-}
-
-.logo h1 {
-    font-size: 2rem;
-    margin: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
     color: #fff;
+    z-index: 1000;
+    padding: 10px 0;
 }
 
-/* Navigation Links */
-.nav-links {
+.navbar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-links {
     list-style: none;
+    display: flex;
 }
 
 .nav-links li {
-    margin: 0 15px;
+    margin-left: 20px;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: #f5f5f5;
-    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px 15px;
     transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #a67c52;
+    color: #f39c12;
 }
 
-/* Home Section with Background Image */
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+/* Hero Section */
 .home-section {
-    background-image: url('images/coffee-background.jpg'); /* Make sure this path is correct */
-    background-size: cover; /* Ensure the image covers the entire section */
-    background-position: center center; /* Center the background image */
-    background-attachment: fixed; /* Make the background fixed when scrolling */
-    height: 100vh; /* Set the height to cover the entire viewport */
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('coffee-hero.jpg') no-repeat center center/cover;
     text-align: center;
+    color: #fff;
 }
 
-/* Optional: Darken background for text contrast */
-.hero-content {
-    background: rgba(0, 0, 0, 0.5); /* Darken the background to make text stand out */
-    padding: 20px;
-    border-radius: 8px;
-}
-
-/* Home Section Heading and Paragraph */
-.home-section h2 {
-    font-size: 3rem;
-    color: #7b3f00;
-}
-
-.home-section p {
-    color: #7b3f00;
-    font-size: 1.2rem;
-    margin: 10px 0;
-}
-
-.cta-button,
-.add-to-order-btn {
-    display: inline-block;
-    background-color: #a67c52;
-    color: #f5f5f5;
+.cta-button {
+    background-color: #f39c12;
     padding: 10px 20px;
-    margin: 15px 10px;
-    text-decoration: none;
-    font-size: 1rem;
+    font-size: 16px;
+    color: #fff;
     border-radius: 5px;
+    text-transform: uppercase;
     transition: background-color 0.3s;
 }
 
-.cta-button:hover,
-.add-to-order-btn:hover {
-    background-color: #3e2a47;
+.cta-button:hover {
+    background-color: #e67e22;
 }
 
 /* Menu Section */
 .menu-section {
-    padding: 50px 20px;
-    background-color: #fff;
+    padding: 60px 20px;
     text-align: center;
 }
 
-.menu-section h2 {
-    font-size: 2.5rem;
-    color: #3e2a47;
-    margin-bottom: 30px;
-}
-
-/* Menu Items */
 .menu-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.menu-category {
-    margin-bottom: 40px;
-}
-
-.menu-category h3 {
-    font-size: 2rem;
-    color: #3e2a47;
-    margin-bottom: 15px;
-}
-
-/* Each Menu Item */
-.menu-item {
-    background-color: #f5f5f5;
-    margin: 10px;
-    padding: 20px;
-    width: 250px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.menu-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.menu-item h4 {
-    color: #3e2a47;
-    font-size: 1.5rem;
-}
-
-.menu-item p {
-    color: #a67c52;
-    font-size: 1rem;
-}
-
-.menu-item span {
-    display: block;
-    color: #3e2a47;
-    font-size: 1.2rem;
-    margin: 10px 0;
-}
-
-/* Button Styles */
-.add-to-order-btn {
-    background-color: #a67c52;
-    color: #fff;
-    padding: 10px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.add-to-order-btn:hover {
-    background-color: #3e2a47;
-}
-
-/* About Section */
-.about-section {
-    padding: 50px 20px;
-    background-color: #f5f5f5;
-    text-align: center;
-}
-
-.about-section h2 {
-    font-size: 2.5rem;
-    color: #7b3f00;
-}
-
-.about-section p {
-    color: #3e2a47;
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 20px auto;
-}
-
-/* Contact Section */
-.contact-section {
-    padding: 50px 20px;
-    background-color: #fff;
-    text-align: center;
-}
-
-.contact-section h2 {
-    font-size: 2.5rem;
-    color: #7b3f00;
-    margin-bottom: 30px;
-}
-
-.contact-section p {
-    color: #3e2a47;
-    font-size: 1.2rem;
-}
-
-/* Footer */
-footer {
-    background-color: #7b3f00;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: 50px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .home-section {
-        background-attachment: scroll; /* Fix background image attachment issue on mobile */
-    }
-
-    .menu-items {
-        flex-direction: column;
-    }
-
-    .menu-item {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        margin-top: 10px;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-}
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
