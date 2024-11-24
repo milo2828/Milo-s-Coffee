@@ -26,7 +26,7 @@ nav {
 }
 
 .logo h1 {
-    font-size: 24px;
+    font-size: 120px;  /* Resize logo to 120px */
     color: white;
     margin-left: 10px;
 }
