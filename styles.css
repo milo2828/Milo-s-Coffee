@@ -67,7 +67,7 @@ nav {
 /* Hero Section */
 .home-section {
     background: url('coffee background.jpg') center/cover no-repeat;
-    height: 60vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
