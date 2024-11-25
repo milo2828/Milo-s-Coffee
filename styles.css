@@ -10,6 +10,22 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+
+    body {
+    background-image: url('background.jpg'); /* Replace 'background.jpg' with your image file or URL */
+    background-size: cover; /* Ensures the image covers the full page */
+    background-position: center center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* Style for the header */
+header {
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Header and Navigation */
