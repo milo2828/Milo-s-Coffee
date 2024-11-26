@@ -146,6 +146,11 @@ h3 {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
 }
 
 .menu-item img {
@@ -170,6 +175,7 @@ h3 {
     font-size: 1rem;
     border-radius: 5px;
     border: 1px solid #ccc;
+    width: auto;
 }
 
 .add-to-order-btn {
@@ -181,6 +187,7 @@ h3 {
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: auto;
 }
 
 .add-to-order-btn:hover {
