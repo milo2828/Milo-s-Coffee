@@ -10,7 +10,7 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
-
+}
 
 /* Header and Navigation */
 header {
@@ -26,6 +26,12 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+nav[aria-label="Main navigation"] {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .logo {
@@ -150,7 +156,7 @@ h3 {
     border: 1px solid #ccc;
 }
 
-.add-to-order-btn {
+.add-to-order-btn, .cta-button {
     background-color: #3B1C0A;
     color: white;
     padding: 10px 20px;
@@ -161,7 +167,7 @@ h3 {
     transition: background-color 0.3s ease;
 }
 
-.add-to-order-btn:hover {
+.add-to-order-btn:hover, .cta-button:hover {
     background-color: #ff7f00;
 }
 
